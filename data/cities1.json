@@ -1,0 +1,39 @@
+{
+  "cities" : [
+    
+       {
+        "id": 4887398,
+        "name": "Chicago",
+        "findname": "CHICAGO",
+        "country": "US",
+        "coord": {
+          "lon": -87.650047,
+          "lat": 41.850029
+        }
+      },
+        {
+          "id": 4887391,
+          "name": "Chicago",
+          "findname": "CHICAGO",
+          "country": "US",
+          "coord": {
+            "lon": -87.650047,
+            "lat": 41.850029
+          }
+        },
+        {
+            "id": 4887392,
+            "name": "Chicago",
+            "findname": "CHICAGO",
+            "country": "US",
+            "coord": {
+              "lon": -87.650047,
+              "lat": 41.850029
+          }
+        }
+  ]
+}
+
+
+
+

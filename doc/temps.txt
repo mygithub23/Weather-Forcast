@@ -1,0 +1,1106 @@
+<aside>
+    <details open>
+        <div class="container mt-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-9">
+                    <div class="card p-4 mt-3">
+                        <h3 class="heading mt-5 text-center">Hi! How can we help You?
+                        </h3>
+                        <div class="d-flex justify-content-center px-5">
+                            <div class="search"> <input type="text" class="search-input"
+                                    placeholder="Search..." name=""> <a href="#"
+                                    class="search-icon"> <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-4 g-1 px-4 mb-5">
+                            <div class="col-md-2">
+                                <div
+                                    class="card-inner p-3 d-flex flex-column align-items-center">
+                                    <img src="https://i.imgur.com/Mb8kaPV.png"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span
+                                            class="mg-text">Account</span> </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div
+                                    class="card-inner p-3 d-flex flex-column align-items-center">
+                                    <img src="https://i.imgur.com/ueLEPGq.png"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span
+                                            class="mg-text">Payments</span> </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div
+                                    class="card-inner p-3 d-flex flex-column align-items-center">
+                                    <img src="https://i.imgur.com/tmqv0Eq.png"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span
+                                            class="mg-text">Delivery</span> </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div
+                                    class="card-inner p-3 d-flex flex-column align-items-center">
+                                    <img src="https://i.imgur.com/D0Sm15i.png"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span
+                                            class="mg-text">Product</span> </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div
+                                    class="card-inner p-3 d-flex flex-column align-items-center">
+                                    <img src="https://i.imgur.com/Z7BJ8Po.png"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span
+                                            class="mg-text">Return</span> </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div
+                                    class="card-inner p-3 d-flex flex-column align-items-center">
+                                    <img src="https://i.imgur.com/YLsQrn3.png"
+                                        width="50">
+                                    <div class="text-center mg-text"> <span
+                                            class="mg-text">Guarantee</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </details>
+</aside>
+
+
+
+.card {
+    border: none;
+    background: #eee
+}
+
+.search {
+    width: 100%;
+    margin-bottom: auto;
+    margin-top: 20px;
+    height: 50px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px
+}
+
+.search-input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    margin-top: 5px;
+    caret-color: transparent;
+    line-height: 20px;
+    transition: width 0.4s linear
+}
+
+.search .search-input {
+    padding: 0 10px;
+    width: 100%;
+    caret-color: #536bf6;
+    font-size: 19px;
+    font-weight: 300;
+    color: black;
+    transition: width 0.4s linear
+}
+
+.search-icon {
+    height: 34px;
+    width: 34px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #536bf6;
+    font-size: 10px;
+    bottom: 30px;
+    position: relative;
+    border-radius: 5px
+}
+
+.search-icon:hover {
+    color: #fff !important
+}
+
+a:link {
+    text-decoration: none
+}
+
+.card-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    border: none;
+    cursor: pointer;
+    transition: all 2s
+}
+
+.card-inner:hover {
+    transform: scale(1.1)
+}
+
+.mg-text span {
+    font-size: 12px
+}
+
+.mg-text {
+    line-height: 14px
+}
+
+
+<section class="row push-down-top-smform-search">
+    <div class="col-sm-8">
+        <h1> Chicago 12/22/2020</h1>
+        <ul>
+            <li>Temperature: 90.9f</li>
+            <li>Humidity: 44%</li>
+            <li>Wind Speed: 5.2 MPH</li>
+            <li>UV Index: 9.6 red</li>
+
+        </ul>
+        <p>A beautiful home on a quiet street featuring an open floor plan with 5 bedrooms
+            and 3 full baths accented by a breathtaking view. After walking in the extra-tall
+            double-door entry way, you are greeted by the family-oriented kitchen which includes
+            a walk-in pantry, granite countertops, a double oven next to a granite topped
+            oversized arrow island with tons of storage underneath.</p>
+        <aside>
+            <details open>
+                <sammary>Weather Search</sammary>
+                <form action="" class="search-bar">
+                    <input type="search" name="search" pattern=".*\S.*" required
+                        aria-label="Search by City">
+                    <button class="search-btn" type="submit">
+                        <span>Search</span>
+                    </button>
+                </form>
+            </details>
+        </aside>
+       
+        <p>Adjacent to the kitchen is a
+            breakfast area overlooking a forest landscape through a sliding glass door.
+            The downstairs bedroom includes a full wardrobe. The living room includes a recessed
+            entertainment area complete with canned lighting with dimmer switch highlighted by a
+            charming dual-sided fireplace.</p>
+        <p>Next is formal dining room and front sitting room. The
+            winding staircase leads you upstairs to the huge master suite featuring a sunk-in
+            tub,
+            large shower, walk-in closet and an additional over-sized walk-in closet. The master
+            bath features split sinks with granite countertops.</p>
+        <p>Also includes:</p>
+        <ul>
+            <li>two car garage</li>
+            <li>high ceilings throughout</li>
+            <li>huge bonus room with two closets</li>
+            <li>wired for spa in backyard</li>
+            <li>dual pane windows</li>
+            <li>upstairs laundry room</li>
+        </ul>
+    </div>
+</section>
+
+
+
+<script type="text/javascript" rel="stylesheet">
+    $(document).ready(function(){
+        var countries = ["Afghanistan", "Albania", "Bahamas", "Bahrain", "Cambodia", "Cameroon", "Denmark", "Djibouti", "East Timor", "Ecuador", "Falkland Islands (Malvinas)", "Faroe Islands", "Gabon", "Gambia", "Haiti", "Heard and Mc Donald Islands", "Iceland", "India", "Jamaica", "Japan", "Kenya", "Kiribati", "Lao People's Democratic Republic", "Latvia", "Macau", "Macedonia", "Namibia", "Nauru", "Oman", "Pakistan", "Palau", "Qatar", "Reunion", "Romania", "Saint Kitts and Nevis", "Saint Lucia", "Taiwan", "Tajikistan", "Uganda", "Ukraine", "Vanuatu", "Vatican City State", "Wallis and Futuna Islands", "Western Sahara", "Yemen", "Yugoslavia", "Zaire", "Zambia"];
+        
+        var countries_suggestion = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.whitespace,
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            local: countries
+        });
+        
+        $('.typeahead').typeahead(
+            { minLength: 1 },
+            { source: countries_suggestion }
+        );
+    });  
+    </script>
+
+
+
+
+btnQuery.addEventListener('click', (e) => {
+
+    // let userQuery = $("#city-search").val();
+
+     
+
+     var config = {
+     method: 'get',
+     url: 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=345fb44947503a9fb445dfe861d317af',
+     headers: { }
+     };
+
+     axios(config)
+     .then(function (response) {
+     console.log(JSON.stringify(response.data));
+     })
+     .catch(function (error) {
+     console.log(error);
+     });
+
+
+     var weatherRequest = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("http://api.openweathermap.org/data/2.5/weather?id=4164138&appid=345fb44947503a9fb445dfe861d317af", weatherRequest)
+        .then(response => response.text())
+        .then(result => { 
+            console.log(result)
+            weather = JSON.parse(result);
+           // data1 = JSON.parse(response);
+            console.log(weather);
+            //console.log(data1);
+            /*
+            weather.main.humidity
+            weather.main.temp
+            weather.wind.speed
+
+            */
+        })
+        .catch(error => console.log('error', error));
+
+
+
+       /*  var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+          };
+          
+          fetch("http://api.openweathermap.org/data/2.5/forecast?id=4164138&appid=345fb44947503a9fb445dfe861d317af", requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                console.log(result)
+                weather = JSON.parse(result);
+                data1 = JSON.parse(response);
+            })
+            .catch(error => console.log('error', error)); */
+})
+/* 
+
+var forcastRequest = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  
+  fetch("http://api.openweathermap.org/data/2.5/forecast?id=4164138&appid=345fb44947503a9fb445dfe861d317af", forcastRequest)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error)); */
+
+
+    *************************************
+
+    <div class="container d-flex justify-content-center">
+        <div class="weather">
+            <div class="row">
+                <div class=" col-md-6">
+                    <div class="card"> <span class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png" /></span>
+                        <div class="title">
+                            <p>Sydney</p>
+                        </div>
+                        <div class="temp">+20<sup>&deg;</sup></div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="header">General</div>
+                                <div class="value">Sunny</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="header">Air pollution</div>
+                                <div class="value">47</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="header">Fire</div>
+                                <div class="value">No</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card"> <span class="icon"><img class="img-fluid" src="https://img.icons8.com/emoji/96/000000/sun-emoji.png" /></span>
+                        <div class="title">
+                            <p>Melbourne</p>
+                        </div>
+                        <div class="temp">+18<sup>&deg;</sup></div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="header">General</div>
+                                <div class="value">Sunny</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="header">Air pollution</div>
+                                <div class="value">20</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="header">Fire</div>
+                                <div class="value">No</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card"> <span class="icon"><img src="https://img.icons8.com/color/50/000000/wind.png" /></span>
+                        <div class="title">
+                            <p>Lithgow</p>
+                        </div>
+                        <div class="temp">+17<sup>&deg;</sup></div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="header">General</div>
+                                <div class="value">Wind</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="header">Air pollution</div>
+                                <div class="value">52</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="header">Fire</div>
+                                <div class="value">No</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card"> <span class="icon"><img src="https://img.icons8.com/office/80/000000/partly-cloudy-day.png" /></span>
+                        <div class="title">
+                            <p>Darvin</p>
+                        </div>
+                        <div class="temp">+15<sup>&deg;</sup></div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="header">General</div>
+                                <div class="value">Cloudy</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="header">Air pollution</div>
+                                <div class="value">34</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="header">Fire</div>
+                                <div class="value">No</div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    //////////////////////////////////////////
+    <div class="row">
+                                
+        <h3>5-Day Forcast</h3>
+
+        <div class="col-sm">
+            <div class="card-columns">
+                <div class="card bg-primary text-white"  >
+                    <div class="card-body">
+                        <h5 class="card-title">12/25/2020 </h5>
+                        <img src="http://openweathermap.org/img/wn/04n@2x.png">
+                        <p class="card-text">Temp: 25.4 F  </p>
+                        <p class="card-text">Humidity: 55%  </p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card-columns">
+                <div class="card bg-primary text-white"  >
+                    <div class="card-body">
+                        <h5 class="card-title">12/25/2020 </h5>
+                        <img src="http://openweathermap.org/img/wn/02d@2x.png">
+                        <p class="card-text">Temp: 25.4 F  </p>
+                        <p class="card-text">Humidity: 55%  </p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card-columns">
+                <div class="card bg-primary text-white"  >
+                    <div class="card-body">
+                        <h5 class="card-title">12/25/2020 </h5>
+                        <img src="http://openweathermap.org/img/wn/01d@2x.png">
+                        <p class="card-text">Temp: 25.4 F  </p>
+                        <p class="card-text">Humidity: 55%  </p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card-columns">
+                <div class="card bg-primary text-white"  >
+                    <div class="card-body">
+                        <h5 class="card-title">12/25/2020 </h5>
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png">
+                        <p class="card-text">Temp: 25.4 F  </p>
+                        <p class="card-text">Humidity: 55%  </p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card-columns">
+                <div class="card bg-primary text-white"  >
+                    <div class="card-body">
+                        <h5 class="card-title">12/25/2020 </h5>
+                        <img src="http://openweathermap.org/img/wn/09d@2x.png" id="w-icon" alt="weather icon">
+                        <p class="card-text fa-thermometer-3 " id="temp">Temp: 25.4 F  </p>
+                        <p class="card-text" id="humidity">Humidity: 55%  </p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>                                                                
+    </div>
+</div>
+</div>                                   
+</section>
+</article>
+</article>
+<footer>
+
+</footer>
+
+
+<div class="container" style="padding:50px 250px;">
+	<form role="form">
+        <div class="form-group">
+          <input type="input" class="form-control input-lg" id="txt-search" placeholder="Type your search character">
+        </div>
+	</form>
+	<div id="filter-records"></div>
+  </div>
+
+  
+$('#txt-search').keyup(function(){
+        var searchField = $(this).val();
+        if(searchField === '')  {
+            $('#filter-records').html('');
+            return;
+        }
+        
+        var regex = new RegExp(searchField, "i");
+        var output = '<div class="row">';
+        var count = 1;
+          $.each(data, function(key, val){
+            if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
+              output += '<div class="col-md-6 well">';
+              output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
+              output += '<div class="col-md-7">';
+              output += '<h5>' + val.employee_name + '</h5>';
+              output += '<p>' + val.employee_salary + '</p>'
+              output += '</div>';
+              output += '</div>';
+              if(count%2 == 0){
+                output += '</div><div class="row">'
+              }
+              count++;
+            }
+          });
+          output += '</div>';
+          $('#filter-records').html(output);
+
+
+            $('#txt-search').keyup(function(){
+        var searchField = $(this).val();
+        if(searchField === '')  {
+            $('#filter-records').html('');
+            return;
+        }
+        
+        var regex = new RegExp(searchField, "i");
+        var output = '<div class="row">';
+        var count = 1;
+          $.each(data, function(key, val){
+            if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
+              output += '<div class="col-md-6 well">';
+              output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
+              output += '<div class="col-md-7">';
+              output += '<h5>' + val.employee_name + '</h5>';
+              output += '<p>' + val.employee_salary + '</p>'
+              output += '</div>';
+              output += '</div>';
+              if(count%2 == 0){
+                output += '</div><div class="row">'
+              }
+              count++;
+            }
+          });
+          output += '</div>';
+          $('#filter-records').html(output);
+    });
+/////////////////////////////////=====================================================================
+
+<!doctype html>
+<html  lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./data/cities.js"></script>
+   <!--  <script src="./data/data.js"></script> -->
+   <!--  <script src="./data/weather_14.json"></script>  -->
+   
+   <!--  <script src="./data/oneCall.js"></script> -->
+
+    <meta name="theme-color" content="#fafafa">
+
+    <style>
+        .section {
+            padding-top: 20px;
+        }
+
+        .card .card-body .card-text small {
+            font-size: .9rem;
+        }
+
+        .card .card-body .card-text #temp {
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+
+        .card .card-body .card-text #humidity {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .active-cyan-4 input[type=text]:focus:not([readonly]) {
+            border: 1px solid #4dd0e1;
+            box-shadow: 0 0 0 1px #4dd0e1;
+        }
+
+       
+      /*   .diviver-line {
+      width: 50%;
+      height: 1px;
+      border: none;
+      margin: auto;
+      margin-top: 4%;
+      margin-bottom: 0%;
+      background-repeat: repeat-x;
+      background-position: center;
+      background-color: transparent;
+      background-image: url(./img/window-minimize-solid.svg);
+} */
+hr {
+   width: 80%;
+   height: 10px;
+   border: 0 none;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 5px;
+   margin-bottom:0px;
+   background-color:transparent ;
+}
+.weather-heading { 
+    background-color:beige;
+    width:500px;
+    height: 10%;
+}
+.perpendicular-line {
+  width: 50%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 0;
+  transform: rotate(90deg);
+  border-color: #010913;
+}
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <section></section>
+            <nav>
+
+            </nav>
+            <sectin class="top">
+                <!-- <figure>
+                      <img src="./img/06-server-side-apis-homework-demo.png" class="top-img img-p" alt="wheater image"> 
+                    <figcaption> Project Image</figcaption>
+                
+                </figure> -->
+                <div>
+                    <h1>Weather </h1>
+                </div>
+                <hr />
+            </sectin>
+        </header>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <div class="active-cyan-4 mb-4">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-1">
+                        <hr class="perpendicular-line">
+                    </div>
+                    <div class="col-lg-8 ">
+                        
+                        <div class="row weather-heading">
+                            <h1 id="city-name"> </h1>
+                        </div>
+                        <div class="row">
+                            <p>Temperature: <span id="current-temp"></span></p>
+                        </div>
+                        <div class="row">
+                            <p>Humidity: <span id="current-humidity"></span></p>
+                        </div>
+                        <div class="row">
+                            <p>Wind Speed: <span id="current-wind"></span></p>
+                        </div>
+                        <div class="row">
+                            <p>UV Index: <span id="current-index"></span></p>
+                        </div>
+                        <div class="row"></div>
+                        <hr class="diviver-line">
+
+                        <div class="container d-flex justify-content-center"></div>
+                        <div class="row">
+                            <div class="row weather-heading">
+                                <h3>5-Day Forcast</h3>
+                            </div>
+                            <hr>
+
+                            <hr class="diviver-line">
+                           
+
+                            <div class="row">
+                                <div class="card-deck">
+                                    <div class="card bg-primary text-white">
+                                        <div class="card-body">
+                                            <h5 class="card-title" ></h5>
+                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
+                                                    alt="weather icon"></span>
+
+                                            <p class="card-text"><small>Temp: <span id="temp"></span>
+                                                </small> </p>
+                                            <p class="card-text"><small>Humidity: <span id="humidity">55%</span></small>
+                                            </p>
+                                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="card bg-primary text-white">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
+                                                alt="weather icon"></span>
+
+                                            <p class="card-text"><small>Temp: <span id="temp"></span>
+                                                </small> </p>
+                                            <p class="card-text"><small>Humidity: <span id="humidity"></span></small>
+                                            </p>
+
+                                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="card bg-primary text-white">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
+                                                alt="weather icon"></span>
+                                            <p class="card-text"><small>Temp: <span id="temp"></span>
+                                                </small> </p>
+                                            <p class="card-text"><small>Humidity: <span id="humidity"></span></small>
+                                            </p>
+                                            <!-- <div class="header">Temp</div>
+                                                    <div class="value">44.4 F</div>                                        
+                                                    <div class="header">Humidity</div>
+                                                    <div class="value">55%</div> -->
+                                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="card bg-primary text-white">
+                                        <div class="card-body">
+                                            <h5 class="card-title"></h5>
+                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
+                                                alt="weather icon"></span>
+                                            <p class="card-text"><small>Temp: <span id="temp"></span></small> </p>
+                                            <p class="card-text"><small>Humidity: <span id="humidity"></span></small>
+                                            </p>
+                                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="card bg-primary text-white">
+                                        <div class="card-body">
+                                            <h5 class="card-title">12/25/2020 </h5>
+                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
+                                                alt="weather icon"></span>
+                                            <p class="card-text"><small>Temp: <span id="temp">24 F</span></small> </p>
+                                            <p class="card-text"><small>Humidity: <span id="humidity">humidity</span></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
+    <script src="js/main.js"></script>
+
+
+
+
+</body>
+
+</html>
+
+'''''''''''''''''''''''''''''---------------------888888888888888888888888888888888888888888888888888
+
+$(function () {
+   /*  import * as weather from '../data/oneCall.json'; */
+ /*    import * as cities from '../weather_14.json'; */
+    
+   /* const data = require('./data/cities.json') */
+   /*  console.log (JSONcities[0] */
+    let d = new Date();
+    let year = d.getFullYear();
+    let month = d.getMonth()+1;
+    let day = d.getDate();
+    let hour = d.getHours();
+    let output =
+    (month<10 ? '0' : '') + month + '/' +
+    (day<10 ? '0' : '') + day + '/' + year;
+    
+    
+    let lat = 0;
+    let lon = 0;
+    let myCities1 ={};
+
+    var objCities ={};
+   // var products =   {"productData”:[]};
+
+/* $('li').each(function(index)
+{
+  products.productData.push({
+    "code": $(this).data('code'), 
+    "quantity":parseInt($(this).data('quantity')), 
+    "price":parseInt($(this).data('price'))
+  });
+}); */
+
+var products ={"productData":[]};
+
+var sitePersonel = {};
+var employees = []
+sitePersonel.employees = employees;
+console.log(sitePersonel);
+
+    function transferObj(){
+
+
+var firstName = "John";
+var lastName = "Smith";
+var employee = {
+  "firstName": firstName,
+  "lastName": lastName
+}
+sitePersonel.employees.push(employee);
+console.log(sitePersonel);
+
+var manager = "Jane Doe";
+sitePersonel.employees[0].manager = manager;
+console.log(sitePersonel);
+
+console.log(JSON.stringify(sitePersonel));
+
+
+       /*  for (i=0; i< cities.length; i++){
+            myCities1[i].name = cities[i].name;
+            for(i=0; i< cities.length; i++){
+                if (cities[i].city.name === cityName) {
+                    console.log(cities[i].city.coord.lon);
+                    console.log(cities[i].city.coord.lat);
+                    "id": cities[i].city.id, 
+                    "name":cities[i].city.name,, 
+                    "lon":cities[i].city.coord.lon,
+                    "lat":cities[i].city.coord.lat
+                   // return cities[i].city.coord.lon
+                }
+            }
+        } */
+    }
+
+    transferObj();
+
+    function updateCities(cityId, cityName, cityLon, cityLan) {
+        this.cityid = cityId;
+        this.cityname= cityName;
+        this.citylon=cityLon;
+        this.citylan=cityLan;
+
+        
+    }
+
+    function extractCities(searchCity){
+        objCities = cities.map(function (c){
+            var objCities={};
+            if(c.city.name === searchCity && c.city.country === "US") {
+                console.log("Hi");
+                let cityId = c.city.id;
+                let cityName = c.city.name;
+                let cityLon = c.city.coord.lon;
+                let cityLan = c.city.coord.lat;
+                objCities = new updateCities(cityId, cityName, cityLon, cityLan);
+              // console.log(objCities);
+              // objCities['cityId'].push('test1'); cityName, cityLon, cityLan);
+
+             //  myCities1("myCities").push({id: cityId, name: cityName , lon: cityLon, lat: cityLat  }); 
+            }
+
+            console.log("Hi");
+            return(objCities);
+        })
+    }
+    
+    myobjCities = extractCities("Chicago");
+
+    let cardDeck = document.querySelector('.card-deck');
+    let card = cardDeck.querySelectorAll('.card');
+    let cardBody = cardDeck.querySelectorAll('.card-body')
+    let cardTitle = cardDeck.querySelectorAll('h5.card-title');
+    let cardTemp = cardDeck.querySelectorAll('.card-text #temp');
+    let cardHumidity = cardDeck.querySelectorAll('.card-text #humidity');
+    let cardIcon = cardDeck.querySelectorAll('span.weather-icon > img') 
+
+    
+    function getLat(cityName) { 
+
+        for(i=0; i< cities.length; i++){
+            if (cities[i].city.name === cityName) {
+                console.log(cities[i].city.coord.lon);
+                console.log(cities[i].city.coord.lat);
+                return cities[i].city.coord.lon
+            }
+
+        }
+         
+    }
+        getLat("Chicago") ;
+
+    function UpdateCurrentWeather(){
+        
+        $('#city-name').text( weatherData[0].timezone + ' ' + `${output}`);
+        $('#city-name').css({
+            'color': 'block',
+            'font-size': '2rem'
+        })
+        $('#current-temp').text(weatherData[0].current.temp)
+        $('#current-humidity').text(weatherData[0].current.humidity)
+        $('#current-wind').text(weatherData[0].current.wind_speed)
+        $('#current-index').text(weatherData[0].current.uvi)        
+    }
+
+    UpdateCurrentWeather(); 
+
+    function convertDate(unixDate){
+        var monthArray = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        const date = new Date(unixDate * 1000);
+        const year = date.getFullYear();
+        /* const month = monthArray[date.getMonth()]; */
+        const month = date.getMonth();
+        const day = date.getDate();
+        const currentDate = month + '/'+ day +'/'+ year;
+        return currentDate;
+
+    }
+
+    function UpdateWeeklyForcast(){
+        
+        for(i=0; i<card.length; i++) {
+
+            $(cardTitle[i]).text(convertDate(weatherData[0].daily[i].dt));
+            $(cardTemp[i]).text(weatherData[0].daily[i].temp.day);
+            $(cardHumidity[i]).text(weatherData[0].daily[i].humidity);
+            $(cardIcon[i]).attr("src",(weatherData[0].daily[i].weather.icon));
+          
+        }
+         
+    
+
+      
+     }
+     UpdateWeeklyForcast();
+/* 
+     function UpdateFromLocalStorage() {
+        for(i=0; i< txtArea.length; i++) {
+            txtArea[i].value = localStorage.getItem(`${txtArea[i].id}`)
+        }
+    }
+    UpdateFromLocalStorage();
+
+    function saveToLocalStorage() {
+        for(i=0; i< txtArea.length; i++) {
+            localStorage.setItem(`${txtArea[i].id}`, txtArea[i].value);  
+        }
+    } */
+
+});
+  
+
+    /* var JSONcities = JSON.parse(cities); 
+    cities[0].city.name
+    cities[0].city.coord.lat
+    */
+
+
+   
+
+   /*  for (key in JsonObj) { if(JsonObj[key] === "Keyvalue") { return key; } } } share.function() 
+    { var JsonObj= { "one":1, "two":2, "three":3, "four":4, "five":5 }; for (key in JsonObj) 
+    { if(JsonObj[key] === "Keyvalue") { return key; } } } share. */
+/* 
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,minutely&units=imperial&appid={{id-1}}", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+            console.log(result)
+            weather = JSON.parse(result);
+           // data1 = JSON.parse(response);
+            console.log(weather);
+            //console.log(data1);
+            /*
+            weather.main.humidity
+            weather.main.temp
+            weather.wind.speed
+            "icon": "04n"
+            http://openweathermap.org/img/wn/10d@2x.png
+
+            
+
+        })
+        .catch(error => console.log('error', error)); */
+
+
+       /*  function UpdateFromLocalStorage() {
+            for(i=0; i< txtArea.length; i++) {
+                txtArea[i].value = localStorage.getItem(`${txtArea[i].id}`)
+            }
+        }
+        UpdateFromLocalStorage();
+    
+        function saveToLocalStorage() {
+            for(i=0; i< txtArea.length; i++) {
+                localStorage.setItem(`${txtArea[i].id}`, txtArea[i].value);  
+            }
+        }
+    
+        btnSave.addEventListener('click', (e) => {
+            saveToLocalStorage();
+        }) */
+    
+   
+    // let userQuery = document.querySelector("#NaturalLangQuery");
+  /*   let btnQuery = document.querySelectorAll("#query");
+    let dvResult1 = document.querySelectorAll(".result1");
+    let dvResult2 = document.querySelector(".result2");
+    const header = document.querySelector('header');
+    const section = document.querySelector('section');
+    let forcast = {};
+    let data1 = {};
+    let data2 = {}; */
+
+     /* 
+         cardTitle[i].texContent(weatherData[0].daily[i].dt);
+            cardTemp[i].texContent(weatherData[0].daily[i].temp);
+            cardHumidity[i].texContent(weatherData[0].daily[i].humidity)
+            cardIcon[i].attribute.src(weatherData[0].daily[i].weather.icon)
+
+         $(cardTitle[i]).text(weatherData[0].daily[i].dt);
+            $(cardTemp[i]).text(weatherData[0].daily[i].temp);
+            $(cardHumidity[i]).text(weatherData[0].daily[i].humidity)
+            $(cardIcon[i]).src(weatherData[0].daily[i].weather.icon) 
+          */
+         /* $(card[i]).cardTitle.texContent(weatherData[0].daily[i].dt)
+         $(card[i]).cardTemp.text(weatherData[0].daily[i].temp);
+         $(card[i]).cardHumidity.text(weatherData[0].daily[i].humidity)
+         $(card[i]).cardIcon.src(weatherData[0].daily[i].weather.icon) */
+         
+
+
+         /* $(cardTtitle[i]).text(weatherData[0].daily[i].dt) */
+
+
+-------------
+
+ var settings = {
+                
+                "url": `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=345fb44947503a9fb445dfe861d317af`,           
+                "method": 'GET',
+                "timeout":0,
+            };
+    
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                weatherData = response.data;
+
+              });
