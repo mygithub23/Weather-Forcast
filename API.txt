@@ -1,0 +1,35 @@
+
+https://openweathermap.org/api
+Default Key: 345fb44947503a9fb445dfe861d317af
+Second Key:  d385181733c7cbcac62cc1ca75671adf
+
+Example of using API key in API call
+API call
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+Parameters
+appid	required	Your unique API key (you can always find it on your account page under the "API key" tab)
+Example of API call
+
+api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+
+API care recommendations
+Like any other things you are using, the API requires some attention. 
+To let it serve you properly, we suggest that you carefully read these instructions and care recommendations.
+
+First, we recommend always call API no more than one time for every 10 minutes for one location, 
+however you call it by city, geographical coordinates or by zip code. 
+Our weather model is not updated more frequently than one time per about 10 minutes.
+
+Second, use only this endpoint for calling Free API: api.openweathermap.org. 
+Please, never use the IP address of the server. The endpoint for premium subscriptions is different; 
+it can be found in the confirmation email we sent you right after your subscription is activated.
+
+Third, to get a precise geocoding searching result would rather call API by city ID. You can always call API by city name, city coordinates or zip code but the searching result might be a bit less unambiguous. The list of city IDs is here.
+
+Forth, last but not least, mind that our subscriptions all have limited availability. 
+The more premium is your subscription the more available is service. 
+If you do not receive a response from the API due to this limitation, 
+please, wait at least for 10 min and then repeat your request. 
+We recommend you keeping the most recent request without changes, 
+it helps to use our internal caching service properly

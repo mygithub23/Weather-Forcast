@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+   <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+   <!--  <link rel="stylesheet" href="css/normalize.css"> -->
+   <!--  <link rel="stylesheet" href="css/main.css">  -->
+ <!--    <script src="./data/data.js"></script> -->
+    <!--  <script src="./data/weather_14.json"></script> -->
+   <!--  <script src="./data/cities.js"></script> -->
+<!--     <script src="./data/citiesmin.js"></script> -->
+    <script src="./js/test.js"></script>
+    <style>
+        
+input:invalid ~ span:after {
+    content: '✖';
+    padding-left: 5px;
+    position: absolute;
+}
+
+input:valid ~ span:after {
+    content: '✓';
+    padding-left: 5px;
+    position: absolute;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col ">
+                <div class="active-cyan-4 mb-4">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis rem explicabo expedita quaerat enim animi dolor doloremque maxime deserunt laborum ut, odio sunt distinctio fuga sed minus temporibus sapiente ratione.</p>
+            </div>
+            <div class="col ">
+                <div class="row">
+                    <form>
+                        <div >
+                            <!-- <input class="form-control" type="text" placeholder="Search" aria-label="Search"> -->
+                            <label for="site-search">Search Cities:</label>
+                            <input type="search" list="citiesList" id="city-search" name="q" placeholder="type city Name"
+                                    aria-label="Search through site content" required>
+
+                            <button>Search</button>
+                            <span class="validity"></span>
+                        </div>
+                    </form>
+                    <datalist id='citiesList'><option value="New York" ><option value="Los Angeles" ><option value="Chicago" ><option value="Miami" ><option value="Dallas" ><option value="Philadelphia" ><option value="Houston" ><option value="Atlanta" ><option value="Washington" ><option value="Boston" ><option value="Phoenix" ><option value="Seattle" ><option value="San Francisco" ><option value="Detroit" ><option value="San Diego" ><option value="Minneapolis" ><option value="Tampa" ><option value="Denver" ><option value="Brooklyn" ><option value="Queens" ><option value="Riverside" ><option value="Baltimore" ><option value="Las Vegas" ><option value="Portland" ><option value="San Antonio" ><option value="St. Louis" ><option value="Sacramento" ><option value="Orlando" ><option value="San Jose" ><option value="Cleveland" ><option value="Pittsburgh" ><option value="Austin" ><option value="Cincinnati" ><option value="Kansas City" ><option value="Manhattan" ><option value="Indianapolis" ><option value="Columbus" ><option value="Charlotte" ><option value="Virginia Beach" ><option value="Bronx" ><option value="Milwaukee" ><option value="Providence" ><option value="Jacksonville" ><option value="Salt Lake City" ><option value="Nashville" ><option value="Richmond" ><option value="Memphis" ><option value="Raleigh" ><option value="New Orleans" ><option value="Louisville" ><option value="Oklahoma City" ><option value="Bridgeport" ><option value="Buffalo" ><option value="Fort Worth" ><option value="Hartford" ><option value="Tucson" ><option value="Omaha" ><option value="El Paso" ><option value="Honolulu" ><option value="McAllen" ><option value="Albuquerque" ><option value="Birmingham" ><option value="Sarasota" ><option value="Dayton" ><option value="Rochester" ><option value="Fresno" ><option value="Allentown" ><option value="Tulsa" ><option value="Cape Coral" ><option value="Concord" ><option value="Colorado Springs" ><option value="Charleston" ><option value="Springfield" ><option value="Grand Rapids" ><option value="Mission Viejo" ><option value="Albany" ><option value="Knoxville" ><option value="Bakersfield" ><option value="Ogden" ><option value="Baton Rouge" ><option value="Akron" ><option value="New Haven" ><option value="Columbia" ><option value="Mesa" ><option value="Palm Bay" ><option value="Provo" ><option value="Worcester" ><option value="Murrieta" ><option value="Greenville" ><option value="Wichita" ><option value="Toledo" ><option value="Staten Island" ><option value="Des Moines" ><option value="Long Beach" ><option value="Port St. Lucie" ><option value="Denton" ><option value="Madison" ><option value="Reno" ><option value="Harrisburg" ><option value="Little Rock" ><option value="Oakland" ><option value="Durham" ><option value="Winston-Salem" ><option value="Bonita Springs" ><option value="Indio" ><option value="Palm Coast" ><option value="Chattanooga" ><option value="Spokane" ><option value="Syracuse" ><option value="Lancaster" ><option value="Arlington" ><option value="Stockton" ><option value="Poughkeepsie" ><option value="Augusta" ><option value="Boise" ><option value="Oxnard" ><option value="Scranton" ><option value="Modesto" ><option value="Kissimmee" ><option value="Aurora" ><option value="Youngstown" ><option value="Fayetteville" ><option value="Anaheim" ><option value="Pensacola" ><option value="Victorville" ><option value="Lancaster" ><option value="Greensboro" ><option value="Corpus Christi" ><option value="Fort Wayne" ><option value="Santa Ana" ><option value="Flint" ><option value="San Juan" ><option value="Fayetteville" ><option value="Jackson" ><option value="Santa Rosa" ><option value="Lansing" ><option value="Ann Arbor" ><option value="Henderson" ><option value="Huntsville" ><option value="Lexington" ><option value="Mobile" ><option value="Fort Collins" ><option value="Asheville" ><option value="Santa Clarita" ><option value="St. Paul" ><option value="Antioch" ><option value="Lakeland" ><option value="Trenton" ><option value="Lincoln" ><option value="Springfield" ><option value="Plano" ><option value="Irvine" ><option value="Davenport" ><option value="Rockford" ><option value="Newark" ><option value="South Bend" ><option value="Shreveport" ><option value="Round Lake Beach" ><option value="Savannah" ><option value="Myrtle Beach" ><option value="Chula Vista" ><option value="Eugene" ><option value="Canton" ><option value="Lubbock" ><option value="Reading" ><option value="Winter Haven" ><option value="Salem" ><option value="St. Petersburg" ><option value="Lafayette" ><option value="Laredo" ><option value="Jersey City" ><option value="Concord" ><option value="Columbus" ><option value="Chandler" ><option value="McKinney" ><option value="Scottsdale" ><option value="Killeen" ><option value="Tallahassee" ><option value="Peoria" ><option value="Wilmington" ><option value="Montgomery" ><option value="Gilbert" ><option value="Glendale" ><option value="North Las Vegas" ><option value="Anchorage" ><option value="Chesapeake" ><option value="Barnstable" ><option value="Norfolk" ><option value="Fremont" ><option value="Kennewick" ><option value="Garland" ><option value="Irving" ><option value="Visalia" ><option value="Atlantic City" ><option value="Nashua" ><option value="Paradise" ><option value="Hialeah" ><option value="York" ><option value="Arlington" ><option value="Evansville" ><option value="Avondale" ><option value="Brownsville" ><option value="Gulfport" ><option value="Appleton" ><option value="Bremerton" ><option value="Hickory" ><option value="Tacoma" ><option value="San Bernardino" ><option value="College Station" ><option value="Kalamazoo" ><option value="Thousand Oaks" ><option value="Roanoke" ><option value="Fontana" ><option value="Moreno Valley" ><option value="North Port" ><option value="Fargo" ><option value="Green Bay" ><option value="Amarillo" ><option value="Portland" ><option value="Santa Barbara" ><option value="Gainesville" ><option value="Olympia" ><option value="Frisco" ><option value="Yonkers" ><option value="Norwich" ><option value="Spring Valley" ></datalist>
+                    
+                        <h2 id="city-name"> asdfasdfasdfaf</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum minima commodi, nam dolores ducimus sunt et nesciunt velit vel? Voluptate illo quis doloremque eaque molestias impedit dicta voluptates nulla iste!</p>
+                    
+                   
+                <di>
+                    
+                </di>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
