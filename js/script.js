@@ -4,28 +4,30 @@ $(function () {
 
     /* const data = require('./data/cities.json') */
     /*  console.log (JSONcities[0] */
-    let d = new Date();
+   /*  let d = new Date();
     let year = d.getFullYear();
     let month = d.getMonth() + 1;
     let day = d.getDate();
     let hour = d.getHours();
     let output =
         (month < 10 ? '0' : '') + month + '/' +
-        (day < 10 ? '0' : '') + day + '/' + year;
-
+        (day < 10 ? '0' : '') + day + '/' + year; */
+    var cityCounter = 0;
     const form = document.querySelector('#searchForm');
     //const cityQuery = document.querySelector('#city-search');
     let cardDeck = document.querySelector('.card-deck');
-    let card = cardDeck.querySelectorAll('.card');
     let cardBody = cardDeck.querySelectorAll('.card-body')
     let cardTitle = cardDeck.querySelectorAll('h5.card-title');
     let cardTemp = cardDeck.querySelectorAll('.card-text #temp');
     let cardHumidity = cardDeck.querySelectorAll('.card-text #humidity');
-    let cardIcon = cardDeck.querySelectorAll('span.weather-icon > img');
+    let ulCities = document.querySelector('#ulCitiesList');
+    
 
     let lat = 0;
     let lon = 0;
     let weatherData = {};
+
+   
 
     /* let str='';
        let htmlstring = cityArr.forEach((city) => {
@@ -42,61 +44,155 @@ $(function () {
         lon = cityInf[3];
     }
 
-
-    function UpdateCurrentWeather(weatherData) {
-
-        $('#city-name').text(weatherData.timezone + ' ' + `${output}`);
-        $('#city-name').css({
-            'color': 'block',
-            'font-size': '2rem'
-        })
-        $('#current-temp').text(weatherData.current.temp)
-        $('#current-humidity').text(weatherData.current.humidity)
-        $('#current-wind').text(weatherData.current.wind_speed)
-        $('#current-index').text(weatherData.current.uvi)
-    }
-
     function convertDate(unixDate) {
-        var monthArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        const date = new Date(unixDate * 1000);
-        const year = date.getFullYear();
+       // var monthArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const dateObject = new Date(unixDate * 1000);
+        //const date = dateObject.toLocaleString()
+        const year = dateObject.getFullYear();
         /* const month = monthArray[date.getMonth()]; */
-        const month = date.getMonth();
-        const day = date.getDate();
+        const month =(dateObject.getMonth()+1);
+        const day = dateObject.getDate();
         const currentDate = month + '/' + day + '/' + year;
         return currentDate;
     }
 
+
+    function UpdateCurrentWeather(cityQuery, weatherData) {
+
+        try {
+            $('#city-name').text(cityQuery + ' ' + convertDate(weatherData.current.dt));
+            $('#city-name').css({
+                'color': 'block',
+                'font-size': '2rem'
+            })
+            $('#current-temp').text(weatherData.current.temp);
+            $('#current-humidity').text(weatherData.current.humidity);
+            $('#current-wind').text(weatherData.current.wind_speed);
+            $('#current-index').text(weatherData.current.uvi);
+        } catch (error) {
+            console.log(error);
+        }
+
+       
+    }
+
+  
+
+    /* const dateObject = new Date(1609606800 * 1000)
+        const date = dateObject.toLocaleString()
+        const year = date.getFullYear(); */
+
     function UpdateWeeklyForcast(weatherData) {
-
+        const form = document.querySelector('#searchForm');
+        let card = cardDeck.querySelectorAll('.card');
+        let cardIcon = cardDeck.querySelectorAll('.weather-icon');
+       // let cardIcon = cardDeck.querySelectorAll('span.weather-icon > img');
+       try {
         for (i = 0; i < card.length; i++) {
+            // http://openweathermap.org/img/wn/10d@2x.png
+             $(cardTitle[i]).text(convertDate(''));
+             $(cardTemp[i]).text('');
+             $(cardHumidity[i]).text('');
+             $(".cardIcon")[i].empty();
+            // imgIcon.remove;
+         }
+        
+    } catch (error) {
+        console.log(error);
+    }
+    
 
-            $(cardTitle[i]).text(convertDate(weatherData.daily[i].dt));
-            $(cardTemp[i]).text(weatherData.daily[i].temp.day);
-            $(cardHumidity[i]).text(weatherData.daily[i].humidity);
-            $(cardIcon[i]).attr("src", (weatherData.daily[i].weather.icon));
+        try {
+            for (i = 0; i < card.length; i++) {
+                // http://openweathermap.org/img/wn/10d@2x.png
+                 $(cardTitle[i]).text(convertDate(weatherData.daily[i].dt));
+                 $(cardTemp[i]).text(weatherData.daily[i].temp.day);
+                 $(cardHumidity[i]).text(weatherData.daily[i].humidity);
+                 let imgIcon = document.createElement('img');
+                 imgIcon.src= "http://openweathermap.org/img/wn/" + weatherData.daily[i].weather[0].icon + "@2x.png"
+                 cardIcon[i].append(imgIcon);
 
+
+     
+             }
+            
+        } catch (error) {
+            console.log(error);
+        }
+        
+    }
+
+    
+    function setCitiesHistory(cityQuery){
+        const liCities = document.createElement('li');
+       
+        
+
+        $(`<li id='${cityCounter}' class='city'></li>`).appendTo("#ulCitiesList");
+        $(`<button class='${cityCounter} btn btn-primary btn-lg btn-block' id='${cityCounter}'></button>`).appendTo(`#${cityCounter}`)
+        $(`.${cityCounter}`).append(cityQuery)
+        cityCounter++
+        
+  
+        
+  
+        $("#ulCitiesList").css({
+            'list-style-type': 'upper-alpha',
+            'color': 'white',
+            'font-size': '2rem'
+          })
+          $("#ulCitiesList").css({
+      
+            'color': 'white',
+            'font-size': '2rem'
+          })
+        //const ulCities = document.querySelector('#ulCitiesList');
+       // const tag = document.createElement('b');
+        //tag.append(`Your password ${time}`);
+        //savedPass.append(tag);
+       /*  liCities.append(cityQuery);
+        ulCities.append(liCities); */
+        /* console.log(savedPass);
+        passHistory.append(savedPass) */;
+    }
+      
+/* 
+    function UpdateFromLocalStorage() {
+        for(i=0; i< txtArea.length; i++) {
+            txtArea[i].value = localStorage.getItem(`${txtArea[i].id}`)
         }
     }
+    UpdateFromLocalStorage();
+
+    function saveToLocalStorage() {
+        for(i=0; i< txtArea.length; i++) {
+            localStorage.setItem(cityQuery);  
+        }
+    }  */
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        console.log("sumitted")
+        
+
 
         let cityQuery = $('#city-search').val();
+        let units = "imperial";
+                     
+        let appid = "345fb44947503a9fb445dfe861d317af";
+        
 
         getCityCoord(`${cityQuery}`);
-
-        //'https://api.openweathermap.org/data/2.5/onecall?lat=40.714272&lon=-74.005966&exclude=hourly,minutely&appid=345fb44947503a9fb445dfe861d317af',
-    
+      //  console.log(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${appid}&units=${units}`)
+        setCitiesHistory(cityQuery);
+      
         try {
             var requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
               };
               
-              fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=345fb44947503a9fb445dfe861d317af`, requestOptions)
+              fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${appid}&units=${units}`, requestOptions)
                 .then(response => response.text())
                 .then(result => {
                     console.log(result)
@@ -104,17 +200,12 @@ $(function () {
                   // data1 = JSON.parse(response);
                     console.log(weatherData);
                     console.log(weatherData.timezone)
-                    //console.log(data1);
-                    
-                    /* weather.main.humidity
-                    weather.main.temp
-                    weather.wind.speed
-                    weather.icon  */
-                    //"icon": "04n"
-                   // http://openweathermap.org/img/wn/10d@2x.png
+                   
         
-                   UpdateCurrentWeather(weatherData);
+                   UpdateCurrentWeather(cityQuery, weatherData);
                    UpdateWeeklyForcast(weatherData);
+                   $('#city-search').val()='';
+
         
                 })
                 .catch(error => console.log('error', error));

@@ -1,11 +1,12 @@
 <!doctype html>
-<html  lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Weather</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <base href="http://openweathermap.org/img/wn/"> -->
 
     <meta property="og:title" content="">
     <meta property="og:type" content="">
@@ -22,16 +23,21 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="./data/cities.js"></script>
-   <!--  <script src="./data/data.js"></script> -->
-   <!--  <script src="./data/weather_14.json"></script>  -->
-   
-   <!--  <script src="./data/oneCall.js"></script> -->
+    <!--  <script src="./data/data.js"></script> -->
+    <!--  <script src="./data/weather_14.json"></script>  -->
+
+    <!--  <script src="./data/oneCall.js"></script> -->
 
     <meta name="theme-color" content="#fafafa">
 
     <style>
         .section {
             padding-top: 20px;
+        }
+
+        .forcast-date {
+            font-size: medium;
+
         }
 
         .card .card-body .card-text small {
@@ -53,8 +59,8 @@
             box-shadow: 0 0 0 1px #4dd0e1;
         }
 
-       
-      /*   .diviver-line {
+
+        /*   .diviver-line {
       width: 50%;
       height: 1px;
       border: none;
@@ -66,41 +72,43 @@
       background-color: transparent;
       background-image: url(./img/window-minimize-solid.svg);
 } */
-hr {
-   width: 80%;
-   height: 10px;
-   border: 0 none;
-   margin-right: auto;
-   margin-left: auto;
-   margin-top: 5px;
-   margin-bottom:0px;
-   background-color:transparent ;
-}
-.weather-heading { 
-    background-color:beige;
-    width:500px;
-    height: 10%;
-}
-.perpendicular-line {
-  width: 50%;
-  margin: auto;
-  margin-top: 10%;
-  margin-bottom: 0;
-  transform: rotate(90deg);
-  border-color: #010913;
-}
+        hr {
+            width: 80%;
+            height: 10px;
+            border: 0 none;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            background-color: transparent;
+        }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
-}
+        .weather-heading {
+            background-color: beige;
+            width: 500px;
+            height: 10%;
+        }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
-}
+        .perpendicular-line {
+            width: 50%;
+            margin: auto;
+            margin-top: 10%;
+            margin-bottom: 0;
+            transform: rotate(90deg);
+            border-color: #010913;
+        }
+
+        input:invalid~span:after {
+            content: '✖';
+            padding-left: 5px;
+            position: absolute;
+        }
+
+        input:valid~span:after {
+            content: '✓';
+            padding-left: 5px;
+            position: absolute;
+        }
     </style>
 </head>
 
@@ -131,21 +139,251 @@ input:valid ~ span:after {
                             <div class="active-cyan-4 mb-4">
                                 <!-- <input class="form-control" type="text" placeholder="Search" aria-label="Search"> -->
                                 <label for="site-search">Search Cities:</label>
-                                <input type="search" list="citiesList" id="city-search" name="q" placeholder="type city Name"
-                                        aria-label="Search through site content" required>
-    
+                                <input type="search" list="citiesList" id="city-search" name="q"
+                                    placeholder="type city Name" aria-label="Search through site content" required>
                                 <button>Search</button>
                                 <span class="validity"></span>
                             </div>
                         </form>
-                        <datalist id='citiesList'><option value="New York" ><option value="Los Angeles" ><option value="Chicago" ><option value="Miami" ><option value="Dallas" ><option value="Philadelphia" ><option value="Houston" ><option value="Atlanta" ><option value="Washington" ><option value="Boston" ><option value="Phoenix" ><option value="Seattle" ><option value="San Francisco" ><option value="Detroit" ><option value="San Diego" ><option value="Minneapolis" ><option value="Tampa" ><option value="Denver" ><option value="Brooklyn" ><option value="Queens" ><option value="Riverside" ><option value="Baltimore" ><option value="Las Vegas" ><option value="Portland" ><option value="San Antonio" ><option value="St. Louis" ><option value="Sacramento" ><option value="Orlando" ><option value="San Jose" ><option value="Cleveland" ><option value="Pittsburgh" ><option value="Austin" ><option value="Cincinnati" ><option value="Kansas City" ><option value="Manhattan" ><option value="Indianapolis" ><option value="Columbus" ><option value="Charlotte" ><option value="Virginia Beach" ><option value="Bronx" ><option value="Milwaukee" ><option value="Providence" ><option value="Jacksonville" ><option value="Salt Lake City" ><option value="Nashville" ><option value="Richmond" ><option value="Memphis" ><option value="Raleigh" ><option value="New Orleans" ><option value="Louisville" ><option value="Oklahoma City" ><option value="Bridgeport" ><option value="Buffalo" ><option value="Fort Worth" ><option value="Hartford" ><option value="Tucson" ><option value="Omaha" ><option value="El Paso" ><option value="Honolulu" ><option value="McAllen" ><option value="Albuquerque" ><option value="Birmingham" ><option value="Sarasota" ><option value="Dayton" ><option value="Rochester" ><option value="Fresno" ><option value="Allentown" ><option value="Tulsa" ><option value="Cape Coral" ><option value="Concord" ><option value="Colorado Springs" ><option value="Charleston" ><option value="Springfield" ><option value="Grand Rapids" ><option value="Mission Viejo" ><option value="Albany" ><option value="Knoxville" ><option value="Bakersfield" ><option value="Ogden" ><option value="Baton Rouge" ><option value="Akron" ><option value="New Haven" ><option value="Columbia" ><option value="Mesa" ><option value="Palm Bay" ><option value="Provo" ><option value="Worcester" ><option value="Murrieta" ><option value="Greenville" ><option value="Wichita" ><option value="Toledo" ><option value="Staten Island" ><option value="Des Moines" ><option value="Long Beach" ><option value="Port St. Lucie" ><option value="Denton" ><option value="Madison" ><option value="Reno" ><option value="Harrisburg" ><option value="Little Rock" ><option value="Oakland" ><option value="Durham" ><option value="Winston-Salem" ><option value="Bonita Springs" ><option value="Indio" ><option value="Palm Coast" ><option value="Chattanooga" ><option value="Spokane" ><option value="Syracuse" ><option value="Lancaster" ><option value="Arlington" ><option value="Stockton" ><option value="Poughkeepsie" ><option value="Augusta" ><option value="Boise" ><option value="Oxnard" ><option value="Scranton" ><option value="Modesto" ><option value="Kissimmee" ><option value="Aurora" ><option value="Youngstown" ><option value="Fayetteville" ><option value="Anaheim" ><option value="Pensacola" ><option value="Victorville" ><option value="Lancaster" ><option value="Greensboro" ><option value="Corpus Christi" ><option value="Fort Wayne" ><option value="Santa Ana" ><option value="Flint" ><option value="San Juan" ><option value="Fayetteville" ><option value="Jackson" ><option value="Santa Rosa" ><option value="Lansing" ><option value="Ann Arbor" ><option value="Henderson" ><option value="Huntsville" ><option value="Lexington" ><option value="Mobile" ><option value="Fort Collins" ><option value="Asheville" ><option value="Santa Clarita" ><option value="St. Paul" ><option value="Antioch" ><option value="Lakeland" ><option value="Trenton" ><option value="Lincoln" ><option value="Springfield" ><option value="Plano" ><option value="Irvine" ><option value="Davenport" ><option value="Rockford" ><option value="Newark" ><option value="South Bend" ><option value="Shreveport" ><option value="Round Lake Beach" ><option value="Savannah" ><option value="Myrtle Beach" ><option value="Chula Vista" ><option value="Eugene" ><option value="Canton" ><option value="Lubbock" ><option value="Reading" ><option value="Winter Haven" ><option value="Salem" ><option value="St. Petersburg" ><option value="Lafayette" ><option value="Laredo" ><option value="Jersey City" ><option value="Concord" ><option value="Columbus" ><option value="Chandler" ><option value="McKinney" ><option value="Scottsdale" ><option value="Killeen" ><option value="Tallahassee" ><option value="Peoria" ><option value="Wilmington" ><option value="Montgomery" ><option value="Gilbert" ><option value="Glendale" ><option value="North Las Vegas" ><option value="Anchorage" ><option value="Chesapeake" ><option value="Barnstable" ><option value="Norfolk" ><option value="Fremont" ><option value="Kennewick" ><option value="Garland" ><option value="Irving" ><option value="Visalia" ><option value="Atlantic City" ><option value="Nashua" ><option value="Paradise" ><option value="Hialeah" ><option value="York" ><option value="Arlington" ><option value="Evansville" ><option value="Avondale" ><option value="Brownsville" ><option value="Gulfport" ><option value="Appleton" ><option value="Bremerton" ><option value="Hickory" ><option value="Tacoma" ><option value="San Bernardino" ><option value="College Station" ><option value="Kalamazoo" ><option value="Thousand Oaks" ><option value="Roanoke" ><option value="Fontana" ><option value="Moreno Valley" ><option value="North Port" ><option value="Fargo" ><option value="Green Bay" ><option value="Amarillo" ><option value="Portland" ><option value="Santa Barbara" ><option value="Gainesville" ><option value="Olympia" ><option value="Frisco" ><option value="Yonkers" ><option value="Norwich" ><option value="Spring Valley" ></datalist>
-                        
+                        <div class="divCity">
+                            <ul id="ulCitiesList"></ul>
+
+                        </div>
+                        <datalist id='citiesList'>
+                            <option value="New York">
+                            <option value="Los Angeles">
+                            <option value="Chicago">
+                            <option value="Miami">
+                            <option value="Dallas">
+                            <option value="Philadelphia">
+                            <option value="Houston">
+                            <option value="Atlanta">
+                            <option value="Washington">
+                            <option value="Boston">
+                            <option value="Phoenix">
+                            <option value="Seattle">
+                            <option value="San Francisco">
+                            <option value="Detroit">
+                            <option value="San Diego">
+                            <option value="Minneapolis">
+                            <option value="Tampa">
+                            <option value="Denver">
+                            <option value="Brooklyn">
+                            <option value="Queens">
+                            <option value="Riverside">
+                            <option value="Baltimore">
+                            <option value="Las Vegas">
+                            <option value="Portland">
+                            <option value="San Antonio">
+                            <option value="St. Louis">
+                            <option value="Sacramento">
+                            <option value="Orlando">
+                            <option value="San Jose">
+                            <option value="Cleveland">
+                            <option value="Pittsburgh">
+                            <option value="Austin">
+                            <option value="Cincinnati">
+                            <option value="Kansas City">
+                            <option value="Manhattan">
+                            <option value="Indianapolis">
+                            <option value="Columbus">
+                            <option value="Charlotte">
+                            <option value="Virginia Beach">
+                            <option value="Bronx">
+                            <option value="Milwaukee">
+                            <option value="Providence">
+                            <option value="Jacksonville">
+                            <option value="Salt Lake City">
+                            <option value="Nashville">
+                            <option value="Richmond">
+                            <option value="Memphis">
+                            <option value="Raleigh">
+                            <option value="New Orleans">
+                            <option value="Louisville">
+                            <option value="Oklahoma City">
+                            <option value="Bridgeport">
+                            <option value="Buffalo">
+                            <option value="Fort Worth">
+                            <option value="Hartford">
+                            <option value="Tucson">
+                            <option value="Omaha">
+                            <option value="El Paso">
+                            <option value="Honolulu">
+                            <option value="McAllen">
+                            <option value="Albuquerque">
+                            <option value="Birmingham">
+                            <option value="Sarasota">
+                            <option value="Dayton">
+                            <option value="Rochester">
+                            <option value="Fresno">
+                            <option value="Allentown">
+                            <option value="Tulsa">
+                            <option value="Cape Coral">
+                            <option value="Concord">
+                            <option value="Colorado Springs">
+                            <option value="Charleston">
+                            <option value="Springfield">
+                            <option value="Grand Rapids">
+                            <option value="Mission Viejo">
+                            <option value="Albany">
+                            <option value="Knoxville">
+                            <option value="Bakersfield">
+                            <option value="Ogden">
+                            <option value="Baton Rouge">
+                            <option value="Akron">
+                            <option value="New Haven">
+                            <option value="Columbia">
+                            <option value="Mesa">
+                            <option value="Palm Bay">
+                            <option value="Provo">
+                            <option value="Worcester">
+                            <option value="Murrieta">
+                            <option value="Greenville">
+                            <option value="Wichita">
+                            <option value="Toledo">
+                            <option value="Staten Island">
+                            <option value="Des Moines">
+                            <option value="Long Beach">
+                            <option value="Port St. Lucie">
+                            <option value="Denton">
+                            <option value="Madison">
+                            <option value="Reno">
+                            <option value="Harrisburg">
+                            <option value="Little Rock">
+                            <option value="Oakland">
+                            <option value="Durham">
+                            <option value="Winston-Salem">
+                            <option value="Bonita Springs">
+                            <option value="Indio">
+                            <option value="Palm Coast">
+                            <option value="Chattanooga">
+                            <option value="Spokane">
+                            <option value="Syracuse">
+                            <option value="Lancaster">
+                            <option value="Arlington">
+                            <option value="Stockton">
+                            <option value="Poughkeepsie">
+                            <option value="Augusta">
+                            <option value="Boise">
+                            <option value="Oxnard">
+                            <option value="Scranton">
+                            <option value="Modesto">
+                            <option value="Kissimmee">
+                            <option value="Aurora">
+                            <option value="Youngstown">
+                            <option value="Fayetteville">
+                            <option value="Anaheim">
+                            <option value="Pensacola">
+                            <option value="Victorville">
+                            <option value="Lancaster">
+                            <option value="Greensboro">
+                            <option value="Corpus Christi">
+                            <option value="Fort Wayne">
+                            <option value="Santa Ana">
+                            <option value="Flint">
+                            <option value="San Juan">
+                            <option value="Fayetteville">
+                            <option value="Jackson">
+                            <option value="Santa Rosa">
+                            <option value="Lansing">
+                            <option value="Ann Arbor">
+                            <option value="Henderson">
+                            <option value="Huntsville">
+                            <option value="Lexington">
+                            <option value="Mobile">
+                            <option value="Fort Collins">
+                            <option value="Asheville">
+                            <option value="Santa Clarita">
+                            <option value="St. Paul">
+                            <option value="Antioch">
+                            <option value="Lakeland">
+                            <option value="Trenton">
+                            <option value="Lincoln">
+                            <option value="Springfield">
+                            <option value="Plano">
+                            <option value="Irvine">
+                            <option value="Davenport">
+                            <option value="Rockford">
+                            <option value="Newark">
+                            <option value="South Bend">
+                            <option value="Shreveport">
+                            <option value="Round Lake Beach">
+                            <option value="Savannah">
+                            <option value="Myrtle Beach">
+                            <option value="Chula Vista">
+                            <option value="Eugene">
+                            <option value="Canton">
+                            <option value="Lubbock">
+                            <option value="Reading">
+                            <option value="Winter Haven">
+                            <option value="Salem">
+                            <option value="St. Petersburg">
+                            <option value="Lafayette">
+                            <option value="Laredo">
+                            <option value="Jersey City">
+                            <option value="Concord">
+                            <option value="Columbus">
+                            <option value="Chandler">
+                            <option value="McKinney">
+                            <option value="Scottsdale">
+                            <option value="Killeen">
+                            <option value="Tallahassee">
+                            <option value="Peoria">
+                            <option value="Wilmington">
+                            <option value="Montgomery">
+                            <option value="Gilbert">
+                            <option value="Glendale">
+                            <option value="North Las Vegas">
+                            <option value="Anchorage">
+                            <option value="Chesapeake">
+                            <option value="Barnstable">
+                            <option value="Norfolk">
+                            <option value="Fremont">
+                            <option value="Kennewick">
+                            <option value="Garland">
+                            <option value="Irving">
+                            <option value="Visalia">
+                            <option value="Atlantic City">
+                            <option value="Nashua">
+                            <option value="Paradise">
+                            <option value="Hialeah">
+                            <option value="York">
+                            <option value="Arlington">
+                            <option value="Evansville">
+                            <option value="Avondale">
+                            <option value="Brownsville">
+                            <option value="Gulfport">
+                            <option value="Appleton">
+                            <option value="Bremerton">
+                            <option value="Hickory">
+                            <option value="Tacoma">
+                            <option value="San Bernardino">
+                            <option value="College Station">
+                            <option value="Kalamazoo">
+                            <option value="Thousand Oaks">
+                            <option value="Roanoke">
+                            <option value="Fontana">
+                            <option value="Moreno Valley">
+                            <option value="North Port">
+                            <option value="Fargo">
+                            <option value="Green Bay">
+                            <option value="Amarillo">
+                            <option value="Portland">
+                            <option value="Santa Barbara">
+                            <option value="Gainesville">
+                            <option value="Olympia">
+                            <option value="Frisco">
+                            <option value="Yonkers">
+                            <option value="Norwich">
+                            <option value="Spring Valley">
+                        </datalist>
+
                     </div>
                     <div class="col-sm-1">
                         <hr class="perpendicular-line">
                     </div>
                     <div class="col-lg-8 ">
-                        
+
                         <div class="row weather-heading">
                             <h1 id="city-name"> </h1>
                         </div>
@@ -172,15 +410,14 @@ input:valid ~ span:after {
                             <hr>
 
                             <hr class="diviver-line">
-                           
+
 
                             <div class="row">
                                 <div class="card-deck">
                                     <div class="card bg-primary text-white">
                                         <div class="card-body">
-                                            <h5 class="card-title" ></h5>
-                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
-                                                    alt="weather icon"></span>
+                                            <h5 class="card-title forcast-date"></h5>
+                                            <span class="weather-icon"></span>
 
                                             <p class="card-text"><small>Temp: <span id="temp"></span>
                                                 </small> </p>
@@ -191,9 +428,8 @@ input:valid ~ span:after {
                                     </div>
                                     <div class="card bg-primary text-white">
                                         <div class="card-body">
-                                            <h5 class="card-title"></h5>
-                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
-                                                alt="weather icon"></span>
+                                            <h5 class="card-title forcast-date"></h5>
+                                            <span class="weather-icon"></span>
 
                                             <p class="card-text"><small>Temp: <span id="temp"></span>
                                                 </small> </p>
@@ -205,9 +441,8 @@ input:valid ~ span:after {
                                     </div>
                                     <div class="card bg-primary text-white">
                                         <div class="card-body">
-                                            <h5 class="card-title"></h5>
-                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
-                                                alt="weather icon"></span>
+                                            <h5 class="card-title forcast-date"></h5>
+                                            <span class="weather-icon"></span>
                                             <p class="card-text"><small>Temp: <span id="temp"></span>
                                                 </small> </p>
                                             <p class="card-text"><small>Humidity: <span id="humidity"></span></small>
@@ -219,12 +454,11 @@ input:valid ~ span:after {
                                             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                                         </div>
                                     </div>
-                                   
+
                                     <div class="card bg-primary text-white">
                                         <div class="card-body">
-                                            <h5 class="card-title"></h5>
-                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
-                                                alt="weather icon"></span>
+                                            <h5 class="card-title forcast-date"></h5>
+                                            <span class="weather-icon"></span>
                                             <p class="card-text"><small>Temp: <span id="temp"></span></small> </p>
                                             <p class="card-text"><small>Humidity: <span id="humidity"></span></small>
                                             </p>
@@ -233,11 +467,11 @@ input:valid ~ span:after {
                                     </div>
                                     <div class="card bg-primary text-white">
                                         <div class="card-body">
-                                            <h5 class="card-title">12/25/2020 </h5>
-                                            <span class="weather-icon"><img src="http://openweathermap.org/img/wn/04n@2x.png"
-                                                alt="weather icon"></span>
+                                            <h5 class="card-title forcast-date">12/25/2020 </h5>
+                                            <span class="weather-icon"></span>
                                             <p class="card-text"><small>Temp: <span id="temp">24 F</span></small> </p>
-                                            <p class="card-text"><small>Humidity: <span id="humidity">humidity</span></small>
+                                            <p class="card-text"><small>Humidity: <span
+                                                        id="humidity">humidity</span></small>
                                         </div>
                                     </div>
                                 </div>

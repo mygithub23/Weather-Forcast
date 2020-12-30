@@ -1104,3 +1104,12 @@ console.log(JSON.stringify(sitePersonel));
                 weatherData = response.data;
 
               });
+
+              
+               //  $(".img-icon")[i].attr("src", (`http://openweathermap.org/img/wn/${weatherData.daily[i].weather[i].icon}@2x.png`));
+                // $(".img-icon")[i].src = "http://openweathermap.org/img/wn/" + weatherData.daily[i].weather[0].icon + "@2x.png";
+                // $(cardIcon[i]).attr("src", (`http://openweathermap.org/img/wn/${weatherData.daily[i].weather[i].icon}@2x.png`));
+
+                // $("#your-image").attr("src", "https://www.w3docs.com/uploads/media/default/0001/05/9eb9e9cba721ba3bb5e653751449173197f2924a.png");
+
+                
